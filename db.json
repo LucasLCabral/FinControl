@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "01f8",
+      "name": "Lucas",
+      "email": "lucas@email.com",
+      "password": "123"
+    },
+    {
+      "id": "c5dc",
+      "name": "Admin",
+      "email": "admin@email.com",
+      "password": "123"
+    },
+    {
+      "id": "0b55",
+      "name": "Admin2",
+      "email": "admin2@email.com",
+      "password": "123"
+    },
+    {
+      "id": "d4b3",
+      "name": "ViniBoy",
+      "email": "vini@email.com",
+      "password": "123"
+    }
+  ]
+}

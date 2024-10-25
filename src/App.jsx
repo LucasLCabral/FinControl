@@ -10,8 +10,8 @@ function App() {
 
   return (
     <>
-      {/* Render Nav only if not on the login page
-      {!isLoginPage && <Nav />} */}
+      {/* Render Nav only if not on the login page */}
+      {/* {!isLoginPage && <Nav />} */}
       <Nav/>
       <Outlet />
       <Footer />
