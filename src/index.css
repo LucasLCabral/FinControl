@@ -2,7 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
 body{
-  background-color: #222222;
-  /* background-color: #ebebeb; */
+  /* background-color: #222222; */
+  background-color: #f8f8f8;
+  background-color: #c9ffd9;
+  background: linear-gradient(to right, #e2e2e2, #c9ffde);
 }
