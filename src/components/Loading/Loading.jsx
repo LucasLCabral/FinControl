@@ -1,17 +1,13 @@
-import Logo from '../../assets/logo/fincontrol-logo.svg'
+import Logo from '../../assets/logo/fincontrol-logo.svg';
+import './Loading.css';
 
-import React, { useEffect } from 'react';
-
-import './Loading.css'; // Add CSS for styling if needed
-
-const Loading = () => {
+const Loading = ({ title = "Welcome to the FinControl!", message = "loading your informations..." }) => {
   return (
     <div className="loading-container flex flex-col gap-5">
       <img src={Logo} alt="Logo" className="loading-logo" />
-      {/* Add any additional loading indicators or text if needed */}
-      <div className='flex flex-col justify-center text-center items-center'>
-        <h1 className='text-3xl font-bold'>Welcome to the FinControl!</h1>
-        <p className='text-sm'>loading your informations...</p>
+      <div className="flex flex-col justify-center text-center items-center">
+        <h1 className="text-3xl font-bold">{title}</h1>
+        <p className="text-sm">{message}</p>
       </div>
     </div>
   );
