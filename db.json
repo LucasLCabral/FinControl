@@ -23,6 +23,12 @@
       "name": "ViniBoy",
       "email": "vini@email.com",
       "password": "123"
+    },
+    {
+      "id": "1bc5",
+      "name": "osvaldo",
+      "email": "osvaldo@email",
+      "password": "123"
     }
   ]
 }

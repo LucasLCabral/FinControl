@@ -1,0 +1,42 @@
+.loading-container {
+    position: fixed; /* Ensure it covers the whole screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure it's on top of everything */
+  }
+  
+  .loading-logo {
+    width: 150px; /* Adjust as needed */
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 0.5s forwards, fadeOut 0.5s forwards 2.5s; /* Fade in for 0.5s, then fade out for 0.5s after 2.5s */
+  }
+  
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8); /* Scale down for a zoom-in effect */
+    }
+    to {
+      opacity: 1;
+      transform: scale(1); /* Scale back to normal */
+    }
+  }
+  
+  /* Fade Out Animation */
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: scale(1); /* Stay at normal size */
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.8); /* Scale down for a zoom-out effect */
+    }
+  }
+  

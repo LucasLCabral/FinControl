@@ -6,13 +6,13 @@ function App() {
   const location = useLocation();
 
   // Check if the current path is "/login"
-  const isLoginPage = location.pathname === "/login";
+  const isDashboardPage = location.pathname === "/dashboard";
 
   return (
     <>
       {/* Render Nav only if not on the login page */}
-      {/* {!isLoginPage && <Nav />} */}
-      <Nav/>
+      {!isDashboardPage && <Nav />}
+      {/* <Nav/> */}
       <Outlet />
       <Footer />
     </>

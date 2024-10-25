@@ -5,7 +5,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-section{
+section.login{
     background-color: #c9ffd9;
     background: linear-gradient(to right, #e2e2e2, #c9ffde);
     display: flex;
