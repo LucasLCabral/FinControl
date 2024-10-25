@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FaGooglePlusG, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Notification from '../../components/Notification/Notification'; // Import the Notification component
@@ -14,6 +14,14 @@ export default function Login() {
   const [notificationType, setNotificationType] = useState(''); // State for notification type
   const [loading, setLoading] = useState(false); // New loading state
 
+  const toTitleCase = (str) => {
+    return str
+      .toLowerCase() // Convert the entire string to lowercase
+      .split(' ') // Split the string into words
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize the first letter of each word
+      .join(' '); // Join the words back into a string
+  };
+
   const handleRegisterClick = () => setIsActive(true);
   const handleLoginClick = () => setIsActive(false);
 
@@ -25,11 +33,16 @@ export default function Login() {
   // Handle registration
   const handleRegister = async (e) => {
     e.preventDefault();
+    
+    // Convert the name to title case
+    const formattedName = toTitleCase(formData.name);
+    
     const response = await fetch('http://localhost:5000/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({ ...formData, name: formattedName }), // Use the formatted name
     });
+
     if (response.ok) {
       setNotification('Account Created. Now Sign In.'); // Show notification
       setFormData({ name: '', email: '', password: '' });
@@ -48,7 +61,7 @@ export default function Login() {
     
     if (user) {
       setNotification('Login Successful');
-      sessionStorage.setItem('user', JSON.stringify(user));
+      sessionStorage.setItem('user', JSON.stringify(user)); // Store user object
       setNotificationType('success'); // Set notification type to success
       setLoading(true); // Set loading to true
 

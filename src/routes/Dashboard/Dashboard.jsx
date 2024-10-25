@@ -1,15 +1,18 @@
 import { PiEye } from "react-icons/pi";
 import { PiEyeClosed } from "react-icons/pi";
-
-import DashboardNav from '../../components/DashboardNav/DashoboardNav'
+import DashboardNav from '../../components/DashboardNav/DashoboardNav'; // Fixed the typo here
+import './dashboard.css'
 
 export default function Dashboard() {
+  const user = JSON.parse(sessionStorage.getItem('user')); // Retrieve user from sessionStorage
+  const userName = user ? user.name : 'User'; // Get the name or fallback to 'User'
+
   return (
-    <>
-    <DashboardNav/>
-    <section className="flex justify-center items-center h-full">
-        <h1>Dashboard</h1>
-    </section>
-    </>
-  )
+    <div className="dashboard-layout"> {/* Parent container for layout */}
+      <DashboardNav className='ml-10'/>
+      <section className="dashboard-content bg-red-700"> {/* Content section */}
+        <h1 className="font-bold text-3xl">Hello, {userName}!</h1>
+      </section>
+    </div>
+  );
 }

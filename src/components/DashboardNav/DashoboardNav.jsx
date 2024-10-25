@@ -13,7 +13,7 @@ import Logo from '../../assets/logo/fincontrol-logo.svg';
 import { Link } from 'react-router-dom';
 import './dashboardnav.css';
 
-export default function Nav() {
+export default function DashboardNav() {
   return (
     <section>
         <aside className='dashboard-nav py-5 px-2'>

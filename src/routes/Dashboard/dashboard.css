@@ -1,0 +1,13 @@
+.dashboard-layout {
+    padding-top: 20px;
+    display: flex; /* Use flexbox for layout */
+    height: 90vh;
+    max-width: 1280px; /* Maximum width for the layout */
+    margin: 0 auto; /* Center the layout horizontally */
+}
+
+.dashboard-content {
+    flex-grow: 1; /* Allow content to take the remaining space */
+    display: flex; /* Flexbox for centering content */
+    padding: 20px; /* Add some padding */
+}
