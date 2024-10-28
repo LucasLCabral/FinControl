@@ -27,7 +27,7 @@ export default function Nav() {
 
   return (
     <header className='max-w-xl mx-auto pt-10'>
-      <nav className="flex justify-around py-3 bg-gradient-to-t from-zinc-100 to-white rounded-[50px]">
+      <nav className="flex justify-around py-3 bg-gradient-to-t from-gray-200 via-white to-white rounded-[50px]">
         <div className='flex justify-center items-center'>
           <Link to={'/dashboard'} onClick={handleDashboardClick}>
             <p className='text-2xl font-medium text-zinc-500 hover:text-zinc-600 duration-200'>
